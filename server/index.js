@@ -7,6 +7,7 @@ io.on('connection', socket => {
         const isExist = arrUserInfo.some(e => e.ten === user.ten);
         socket.peerId = user.peerId;
         if (isExist) {
+            console.log('Dang ky that bai');
             return socket.emit('DANG_KY_THAT_BAI');
         }
         arrUserInfo.push(user);
