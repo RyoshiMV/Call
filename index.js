@@ -10,13 +10,13 @@ socket.on('DANH_SACH_ONLINE', arrUserInfo => {
     $('#div-dangky').hide();
     arrUserInfo.forEach(user => {
         const { ten, peerId } = user;
-        $('#ulUser').append(`<li id="${peerId}">${ten}</li>`);
+        $('#ulUser').append(`<li style="color: red;cursor: pointer;margin:20;" id="${peerId}">${ten}</li>`);
     });
 
     // lang nghe danh sach online moi lang nghe gnuoi dung moi ;
     socket.on('CO_NGUOI_DUNG_MOI', user => {
         const { ten, peerId } = user;
-        $('#ulUser').append(`<li id="${peerId}">${ten}</li>`);
+        $('#ulUser').append(`<li style="color: red;cursor: pointer;" id="${peerId}">${ten}</li>`);
     });
 
     socket.on('AI_DO_NGAT_KET_NOI', peerId => {
