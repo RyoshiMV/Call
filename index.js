@@ -1,6 +1,6 @@
 //1 open Stream ;
 //2 play in stream ; 
-const socket = io('https://minhngdevsg.github.io/');
+const socket = io('http://localhost:2000');
 
 $('#div-chat').hide();
 
@@ -42,8 +42,8 @@ function playStream(idVideoTag, stream) {
 
 // openStream()
 //     .then(stream => playStream('localStream',stream));
-
-const peer = new Peer({ key: 'peerjs',host:'mypeer2207.herokuapp.com',secure:true,port:443 });
+//port:443 
+const peer = new Peer({ key: 'peerjs',host:'mypeer2207.herokuapp.com',secure:true});
 
 peer.on('open', id => {
     // lay ra the nao do co id la : my-peer
