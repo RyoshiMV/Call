@@ -42,14 +42,15 @@ function playStream(idVideoTag, stream) {
 
 // openStream()
 //     .then(stream => playStream('localStream',stream));
-//port:443 
-const peer = new Peer({ key: 'peerjs',host:'mypeer2207.herokuapp.com',secure:true});
+//key: 'peerjs',host:'mypeer2207.herokuapp.com',secure:true,port:443
+const peer = new Peer({ key: 'lwjd5qra8257b9' });
 
 peer.on('open', id => {
     // lay ra the nao do co id la : my-peer
     // document.getElementById('my-peer').innerHTML = id;
     // signUp 
     $('#btnSignUp').click(function () {
+        console.log('register');
         const username = $('#txtUsername').val();
         socket.emit('NGUOI_DUNG_DANG_KY', { ten: username, peerId: id });
     });
