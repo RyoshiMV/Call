@@ -1,6 +1,6 @@
 //1 open Stream ;
 //2 play in stream ; 
-const socket = io('http://localhost:2000');
+const socket = io('https://minhngdevsg.github.io/');
 
 $('#div-chat').hide();
 
@@ -47,7 +47,7 @@ const peer = new Peer({ key: 'peerjs',host:'mypeer2207.herokuapp.com',secure:tru
 
 peer.on('open', id => {
     // lay ra the nao do co id la : my-peer
-    document.getElementById('my-peer').innerHTML = id;
+    // document.getElementById('my-peer').innerHTML = id;
     // signUp 
     $('#btnSignUp').click(function () {
         const username = $('#txtUsername').val();
