@@ -1,6 +1,6 @@
 //1 open Stream ;
 //2 play in stream ; 
-const socket = io('http://localhost:2000');
+const socket = io('https://streaming2207.herokuapp.com/');
 
 $('#div-chat').hide();
 
